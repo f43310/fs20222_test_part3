@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../fs2022_test/part2/ && npm run build && cp -r build ../../fs2022_test_part3_backend",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,11 @@
     "mongoose": "^6.4.0"
   },
   "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.16",
     "prettier": "^2.7.1"
   }
